@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREA Services</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/hover.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/cargar_footer_header.js"></script>
+    <style>
+        /* Ajustes generales */
+        body {
+            background-color: #f8f9fa; /* Color de fondo más suave */
+        }
+
+        #header-placeholder,
+        #footer-placeholder {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            padding-top: 50px; /* Espaciado superior */
+        }
+
+        .card {
+            margin: 20px; /* Espacio entre tarjetas */
+            height: 400px; /* Aumenta la altura de las tarjetas */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+            overflow: hidden; /* Evita desbordamiento */
+            position: relative; /* Para posicionar título */
+        }
+
+        .card img {
+            height: 70%; /* Imagen ocupa el 70% de la tarjeta */
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+        }
+
+        .card-title {
+            position: absolute; /* Posición absoluta */
+            bottom: 0; /* Fijo al fondo de la tarjeta */
+            left: 0; /* Alinear a la izquierda */
+            right: 0; /* Alinear a la derecha */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+            color: white; /* Texto blanco */
+            padding: 10px; /* Espaciado interno */
+            font-size: 1.5rem; /* Tamaño del texto */
+            text-align: center; /* Centrado */
+        }
+
+        .flip-card {
+            position: relative; /* Para manejar el flip */
+            cursor: pointer; /* Indica interactividad */
+        }
+
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d; /* Mantiene el 3D */
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Oculta la parte trasera al girar */
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg); /* Gira 180 grados */
+            background-color: #007BFF; /* Fondo azul */
+            color: white; /* Texto blanco */
+            display: flex; /* Flex para centrar */
+            flex-direction: column; /* Alinear en columna */
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+            padding: 20px; /* Espaciado */
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg); /* Gira al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/521234567890" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <h1 class="text-center" style="margin-top: 100px; color: #007BFF;" >NUESTROS SERVICIOS</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 mb-5">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/ingenieria.jpg" class="card-img-top" alt="Diseño e Ingeniería">
+                            <h5 class="card-title">Diseño e Ingeniería</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Diseño e Ingeniería</h5>
+                            <p class="card-text">Diseñamos y desarrollamos soluciones personalizadas según tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/medida.jpeg" class="card-img-top" alt="Fabricación a Medida">
+                            <h5 class="card-title">Fabricación a Medida</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Fabricación a Medida</h5>
+                            <p class="card-text">Fabricamos productos a medida y diseñados específicamente para cada cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/montaje.jpeg" class="card-img-top" alt="Instalación y Montaje">
+                            <h5 class="card-title">Instalación y Montaje</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Instalación y Montaje</h5>
+                            <p class="card-text">Ofrecemos servicios completos de instalación y montaje de nuestros productos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Mantenimiento -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/mantenimiento.jpeg" class="card-img-top" alt="Mantenimiento">
+                            <h5 class="card-title">Mantenimiento</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Mantenimiento</h5>
+                            <p class="card-text">Brindamos servicios de mantenimiento preventivo y correctivo para prolongar la vida útil de tus productos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5: Consultoría -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/consultoria.jpg" class="card-img-top" alt="Consultoría">
+                            <h5 class="card-title">Consultoría</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Consultoría</h5>
+                            <p class="card-text">Ofrecemos consultoría especializada para optimizar procesos y mejorar la eficiencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6: Capacitación -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/capacitacion.jpg" class="card-img-top" alt="Capacitación">
+                            <h5 class="card-title">Capacitación</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Capacitación</h5>
+                            <p class="card-text">Proporcionamos capacitación a tu equipo para asegurar el uso eficiente de nuestros productos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 7: Auditoría -->
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/auditoria.jpg" class="card-img-top" alt="Auditoría">
+                            <h5 class="card-title">Auditoría</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Auditoría</h5>
+                            <p class="card-text">Realizamos auditorías para garantizar la calidad y cumplimiento de tus procesos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/material.jpg" class="card-img-top" alt="Venta y Suministro de Material">
+                            <h5 class="card-title">Venta y Suministro de Material</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Venta y Suministro de Material</h5>
+                            <p class="card-text">Ofrecemos material nacional e importado, incluyendo placas, discos, anillos, tubos, y conexiones en acero al carbón, inoxidables, cobre y aleaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/maquinado.jpg" class="card-img-top" alt="Maquinado y Barrenado">
+                            <h5 class="card-title">Maquinado y Barrenado</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Maquinado y Barrenado</h5>
+                            <p class="card-text">Proporcionamos servicios de maquinado y barrenado de alta precisión, adaptados a tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/transportacion.jpg" class="card-img-top" alt="Transportación y Maniobras">
+                            <h5 class="card-title">Transportación y Maniobras</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Transportación y Maniobras</h5>
+                            <p class="card-text">Realizamos transportación y maniobras seguras de equipos y materiales para tu comodidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./images/dictaminacion.jpg" class="card-img-top" alt="Dictaminación">
+                            <h5 class="card-title">Dictaminación</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="card-title">Dictaminación</h5>
+                            <p class="card-text">Ofrecemos servicios de dictaminación a través de una Unidad de Verificación para asegurar el cumplimiento de normativas. Nos encargamos de la memoria de cálculo y certificado de fabricación necesarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

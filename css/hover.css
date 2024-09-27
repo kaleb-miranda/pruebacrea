@@ -1,0 +1,116 @@
+.custom-link {
+    color: rgb(69, 68, 68); /* Color normal */
+    font-weight: bold;
+    transition: color 0.3s; /* Transición suave */
+}
+
+.custom-link:hover {
+    color: #007BFF; /* Azul claro por defecto al pasar el mouse */
+}
+
+.custom-link:nth-child(2):hover {
+    color: #007BFF; /* Azul oscuro para "Servicios" */
+}
+
+.custom-link:nth-child(3):hover {
+    color: #007BFF; /* Plateado para "Proyectos" */
+}
+
+.custom-link:nth-child(4):hover {
+    color: #007BFF; /* Azul claro para "Contacto" */
+}
+
+.custom-link:nth-child(5):hover {
+    color: #007BFF; /* Azul claro para "Contacto" */
+}
+.whatsapp-button {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Forma circular */
+    padding: 10px; /* Espacio interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Tamaño del ícono */
+    height: auto; /* Mantiene la proporción */
+}
+
+.uniform-image {
+    width: 100%;
+    height: 300px; /* Ajusta esta altura según necesites */
+    object-fit: cover;
+}
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 150px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan una proporción uniforme */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.section-title {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.flip-card {
+    perspective: 1000px; /* Da profundidad para el efecto 3D */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Fondo de la tarjeta al girar */
+    transform: rotateY(180deg);
+}
+
+
+
